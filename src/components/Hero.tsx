@@ -219,7 +219,7 @@ useEffect(() => {
             <span className="transition-transform group-hover:translate-x-0.5">→</span>
           </a>
           <a
-            href="/DataAnalyst_Harshita_Pandey Resume.pdf"
+            href="/resume.pdf"
             download
             className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:border-primary"
           >

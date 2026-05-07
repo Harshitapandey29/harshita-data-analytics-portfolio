@@ -30,7 +30,7 @@ const projects: Project[] = [
     emoji: "🚗",
     link: "https://github.com/Harshitapandey29/Uber-Supply-Demand-Gap",
     tools: ["SQL", "Excel"],
-    image: "/uber_supply.png",
+    image: "/project-images/uber_supply.png",
     bullets: [
       "Analyzed ride request data to identify demand-supply gaps across time slots.",
       "Discovered up to 35% unmet ride requests during peak late-evening hours.",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     emoji: "🏡",
     link: "https://github.com/Harshitapandey29/Airbnb-Market-Listing-Performance-Analysis-Excel-SQL-PowerBI",
     tools: ["SQL", "Python", "Power BI"],
-    image: "/Airbnb_Dashboard.png",
+    image: "/project-images/Airbnb_Dashboard.png",
     bullets: [
       "End-to-end analysis of pricing, availability, and occupancy trends.",
       "Optimized pricing strategies linked to up to 20% higher booking rates.",
@@ -62,7 +62,7 @@ const projects: Project[] = [
     emoji: "🎓",
     link: "https://github.com/Harshitapandey29/Student-Success-Analysis-Excel-Dashboard",
     tools: ["Excel"],
-    image: "/Screenshot 2026-05-01 134343.png",
+    image: "/project-images/Screenshot 2026-05-01 134343.png",
     bullets: [
       "Analyzed student performance using Pivot Tables and Excel dashboards.",
       "Identified key factors: attendance, study time, and consistency.",
@@ -77,7 +77,7 @@ const projects: Project[] = [
     emoji: "🛒",
     link: "https://github.com/Harshitapandey29/Walmart-Sales-Analysis-SQL-Python-Power-BI",
     tools: ["SQL", "Excel", "Power BI"],
-    image: "/Dashboard.png",
+    image: "/project-images/Dashboard.png",
     bullets: [
       "End-to-end sales analysis across regions and product categories.",
       "Top categories contributed 40% of total revenue.",
@@ -93,7 +93,7 @@ const projects: Project[] = [
   emoji: "📊",
   link: "https://github.com/Harshitapandey29/HR-Analytics-Dashboard-Excel",
   tools: ["Excel", "Data Visualization"],
-  image: "/Screenshot 2026-01-09 183301.png",
+  image: "/project-images/Screenshot 2026-01-09 183301.png",
   bullets: [
     "Developed an interactive HR dashboard to track employee performance, salaries, and attrition trends.",
     "Analyzed workforce distribution across departments, age groups, and gender.",
@@ -109,7 +109,7 @@ const projects: Project[] = [
   emoji: "🍽️",
   link: "https://github.com/Harshitapandey29/Local-Food-Wastage-Management-System",
   tools: ["Python", "SQL", "Excel"],
-  image: "/Local_food.png",
+  image: "/project-images/Local_food.png",
   bullets: [
     "Designed a system to connect restaurants and individuals with NGOs for food redistribution.",
     "Enabled real-time tracking of surplus food availability and requests.",
