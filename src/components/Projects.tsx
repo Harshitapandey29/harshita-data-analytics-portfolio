@@ -30,7 +30,7 @@ const projects: Project[] = [
     emoji: "🚗",
     link: "https://github.com/Harshitapandey29/Uber-Supply-Demand-Gap",
     tools: ["SQL", "Excel"],
-    image: "/project-images/uber_supply.png",
+    image: "/project-images/Uber_supply.png",
     bullets: [
       "Analyzed ride request data to identify demand-supply gaps across time slots.",
       "Discovered up to 35% unmet ride requests during peak late-evening hours.",
