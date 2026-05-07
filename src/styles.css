@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+:root {
+  --radius: 0.75rem;
+
+    --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  /* Dark, data-inspired palette */
+  --background: oklch(0.16 0.012 250);
+  --foreground: oklch(0.96 0.005 250);
+  --surface: oklch(0.20 0.014 250);
+  --surface-elevated: oklch(0.235 0.016 250);
+
+  --card: oklch(0.205 0.014 250);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.205 0.014 250);
+  --popover-foreground: oklch(0.96 0.005 250);
+
+  --primary: oklch(0.72 0.18 235);          /* electric blue */
+  --primary-foreground: oklch(0.14 0.02 250);
+  --glow: oklch(0.78 0.19 235);
+
+  --secondary: oklch(0.26 0.018 250);
+  --secondary-foreground: oklch(0.96 0.005 250);
+
+  --muted: oklch(0.24 0.014 250);
+  --muted-foreground: oklch(0.68 0.02 250);
+
+  --accent: oklch(0.70 0.20 25);            /* subtle red accent */
+  --accent-foreground: oklch(0.98 0.005 250);
+
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.30 0.015 250 / 60%);
+  --input: oklch(0.28 0.015 250);
+  --ring: oklch(0.72 0.18 235);
+
+  --chart-1: oklch(0.72 0.18 235);
+  --chart-2: oklch(0.70 0.20 25);
+  --chart-3: oklch(0.78 0.15 180);
+  --chart-4: oklch(0.80 0.16 90);
+  --chart-5: oklch(0.65 0.18 300);
+}
+
+.dark {
+  --background: oklch(0.16 0.012 250);
+  --foreground: oklch(0.96 0.005 250);
+}
+
+@layer base {
+  * {
+    border-color: oklch(0.30 0.015 250 / 60%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+
+  background-image:
+    radial-gradient(
+      1200px 600px at 80% -10%,
+      oklch(0.72 0.18 235 / 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at -10% 20%,
+      oklch(0.70 0.20 25 / 0.10),
+      transparent 60%
+    );
+
+  background-attachment: fixed;
+}
+
+  h1, h2, h3, h4 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+}
+
+@layer utilities {
+  .grid-overlay {
+    background-image:
+      linear-gradient(to right, oklch(0.96 0.005 250 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.96 0.005 250 / 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  }
+
+  .glow-ring {
+  box-shadow:
+    0 0 0 1px oklch(0.72 0.18 235 / 0.35),
+    0 10px 60px -10px oklch(0.72 0.18 235 / 0.55),
+    0 0 80px oklch(0.72 0.18 235 / 0.20);
+}
+
+  .text-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.96 0.005 250) 0%,
+    oklch(0.78 0.19 235) 40%,
+    oklch(0.72 0.18 235) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+  .card-hover {
+    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s, border-color 0.35s;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: oklch(0.72 0.18 235 / 0.55);
+    box-shadow: 0 20px 60px -20px oklch(0.72 0.18 235 / 0.30);
+  }
+
+  .data-dot {
+    width: 6px; height: 6px; border-radius: 9999px;
+    background: var(--glow);
+    box-shadow: 0 0 12px var(--glow), 0 0 24px var(--glow);
+  }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float { animation: float-y 6s ease-in-out infinite; }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  .animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+
+  @keyframes dash {
+    to { stroke-dashoffset: -200; }
+  }
+  .animate-dash { stroke-dasharray: 6 8; animation: dash 8s linear infinite; }
+}
