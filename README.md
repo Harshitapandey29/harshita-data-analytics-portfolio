@@ -4,7 +4,9 @@ A modern and interactive Data Analytics Portfolio built using React, TypeScript,
 
 ----
 
-## *🚀Live Portfolio:*  Coming Soon
+## *🚀Live Portfolio:*  
+
+https://harshita-data-analytics-portfolio.vercel.app/
 
 ## **✨Features:**
 
